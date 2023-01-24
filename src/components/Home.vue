@@ -65,7 +65,7 @@
       <div v-for="image in imageInfos" :key="image" class="img-div">
         <img
           class="img"
-          :src="`http://[::1]:3000/files/${image}`"
+          :src="`http://bcbf-49-37-96-98.in.ngrok.io/files/${image}`"
           :alt="image"
         />
       </div>
