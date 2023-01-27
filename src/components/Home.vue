@@ -65,7 +65,7 @@
       <div v-for="image in imageInfos" :key="image" class="img-div">
         <img
           class="img"
-          :src="`https://www.alegralabs.com:5008/files/${image}`"
+          :src="`https://www.alegralabs.com:5007/files/${image}`"
           :alt="image"
         />
       </div>
