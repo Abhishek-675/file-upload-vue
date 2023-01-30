@@ -65,9 +65,9 @@
   </div>
 
   <!--error message-->
-  <div v-if="message" class="alert alert-secondary" role="alert">
+  <div v-if="message" class="alert alert-secondary text-danger text-center " role="alert"><strong>
     {{ message }}
-  </div>
+  </strong></div>
 
   <!--image display gallery-->
   <div class="img-container">
@@ -123,8 +123,9 @@ export default {
           this.imageInfos = images.data;
         })
         .catch((err) => {
+          // console.log(err)
           this.progress = 0;
-          this.message = "Could not upload the image!" + err;
+          this.message = "Could not upload the image!" + " " + err.response.data.error.message;
           this.currentImage = undefined;
         });
     },
